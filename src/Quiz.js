@@ -16,17 +16,17 @@ class Quiz extends Component {
 
   render() {
     console.log(quizData);
-    const isQuizEnd = function(){
-      return (this.state.quiz_position - 1 === quizData.quiz_questions.length);
+    const isQuizEnd = () => {
+      return ((this.state.quiz_position - 1) === quizData.quiz_questions.length);
     };
     console.log(isQuizEnd);
     return (
       <div>
         <div className="QuizQuestion">
-				{ isQuizEnd === true  		// if true
+				{/* { isQuizEnd === true  		// if true
 					?  <QuizEnd />		// show quiz end dialog, otherwise:
-					: <QuizQuestion   // show questions
-          quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}
+					: <QuizQuestion   // show questions */}
+          quiz_question={quizData.quiz_questions[0]}
           /> }
         </div>
       </div>
@@ -36,12 +36,3 @@ class Quiz extends Component {
 
 
 export default Quiz;
-
-
-// Conditionally displaying components in the Quiz JSX
-
-// Write a condition in JSX that displays QuizEnd component if the isQuizEnd constant is true.
-
-// If it is false, display QuizQuestion component keeping the quiz_question prop that's already there.
-
-// Note: until we get the full logic set up, you can test if this is working by manually setting isQuizEnd to true or false.
