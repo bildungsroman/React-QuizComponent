@@ -23,10 +23,10 @@ class Quiz extends Component {
     return (
       <div>
         <div className="QuizQuestion">
-				{/* { isQuizEnd === true  		// if true
+				{ isQuizEnd === true  		// if true
 					?  <QuizEnd />		// show quiz end dialog, otherwise:
-					: <QuizQuestion   // show questions */}
-          quiz_question={quizData.quiz_questions[0]}
+					: <QuizQuestion   // show questions
+          quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}
           /> }
         </div>
       </div>
