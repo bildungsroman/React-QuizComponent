@@ -6,7 +6,9 @@ import Quiz from './Quiz';
 class App extends Component {
   render() {
     return (
-      <Quiz />
+      <div>
+        <Quiz />
+      </div>
     );
   }
 }
